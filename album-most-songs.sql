@@ -1,5 +1,5 @@
 -- Returns the album with most songs
-select Title, count(*)
+select Title
     from Album
     join Track using (AlbumId)
     group by AlbumId

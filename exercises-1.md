@@ -32,7 +32,7 @@ select Title
 4. What's the title of the album with the most songs?
 ```sql
 -- Returns the album with most songs
-select Title, count(*)
+select Title
     from Album
     join Track using (AlbumId)
     group by AlbumId
@@ -42,7 +42,7 @@ select Title, count(*)
 5. What's the title of the album with the fewest songs?
 ```sql
 -- Returns the album with fewest songs
-select Title, count(*)
+select Title
     from Album
     join Track using (AlbumId)
     group by AlbumId
