@@ -3,7 +3,15 @@ Repository for SQL exercises using [chinook database](https://github.com/lerocha
 
 ## Exercises-1
 1. Who's the customer who has spent the most?
-[https://github.com/PontusC/chinook-sql-doe24/blob/390252a837e1ead8c18fbe1f6b84ec6d5f7f50bb/customer-most-spent.sql](https://github.com/PontusC/chinook-sql-doe24/blob/390252a837e1ead8c18fbe1f6b84ec6d5f7f50bb/customer-most-spent.sql#L1-L7)
+```sql
+-- Returns the customer from Customers that has spent the most money
+select FirstName, LastName
+    from Customer 
+    join Invoice using (CustomerId) 
+    group by CustomerId 
+    order by sum(Total) desc
+    limit 1;
+```
 2. What's the title of the longest album? (most minutes of music)
 
 3. What's the title of the shortest album? (fewest minutes of music)
