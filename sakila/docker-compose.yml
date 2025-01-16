@@ -1,0 +1,12 @@
+services:
+  mariadb-server:
+    image: mariadb:11
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+
+  mariadb-client:
+    image: mariadb:11
+    command: sleep infinity
+    volumes:
+      - ~/dev/docker/sakila/sakila-db:/sakila
+
