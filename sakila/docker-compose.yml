@@ -8,5 +8,4 @@ services:
     image: mariadb:11
     command: sleep infinity
     volumes:
-      - ~/dev/docker/sakila/sakila-db:/sakila
-
+      - ./sakila-db:/sakila
