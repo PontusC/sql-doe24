@@ -1,1 +1,0 @@
-Requires [sakila-db](https://downloads.mysql.com/docs/sakila-db.tar.gz).
