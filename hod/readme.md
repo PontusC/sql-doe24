@@ -1,1 +1,1 @@
-Solutions for Hanukkah of Data.
+Solutions for [Hanukkah of Data](https://hanukkah.bluebird.sh/5784/).
