@@ -18,9 +18,7 @@ create table [company]
 create table [office]
 (
     [office_id] integer primary key,
-    [adress] nvarchar not null,
-    [company_id] integer not null,
-    foreign key (company_id) references company (company_id)
+    [adress] nvarchar not null
 );
 
 create table [contact]
@@ -45,12 +43,12 @@ insert into company values
     (4, 'comp_4');
 
 insert into office values
-    (1, 'street 1', 1),
-    (2, 'street 2', 1),
-    (3, 'street 3', 2),
-    (4, 'street 4', 3),
-    (5, 'street 5', 4),
-    (6, 'street 6', 4);
+    (1, 'street 1'),
+    (2, 'street 2'),
+    (3, 'street 3'),
+    (4, 'street 4'),
+    (5, 'street 5'),
+    (6, 'street 6');
 
 insert into contact values
     (1, 'person', 'one', '+123123123', 'mail@domain.com', 1, 1),
