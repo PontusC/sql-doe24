@@ -8,5 +8,5 @@ from customers
 where like('%11435', citystatezip) and -- check neighbourhood
 mod(substr(birthdate, 0, 5), 12) = 7 and -- check year
 -- Check month and date
-((cast(substr(birthdate, 7, 1) as int) = 6  and cast(substr(birthdate, 9, 2) as int) < 21 ) or
+((cast(substr(birthdate, 7, 1) as int) = 6  and cast(substr(birthdate, 9, 2) as int) >= 21 ) or
 (cast(substr(birthdate, 7, 1) as int) = 7  and cast(substr(birthdate, 9, 2) as int) < 22 ));
