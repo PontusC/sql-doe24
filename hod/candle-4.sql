@@ -13,5 +13,5 @@ from (
         -- Below didnt work without casting as int, why?
         cast (strftime('%H', orders.ordered) as int) between 0 and 5
     group by
-        name, phone
+        name
 );
