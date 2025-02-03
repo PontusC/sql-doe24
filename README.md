@@ -6,3 +6,4 @@ Also contains some solutions to [Hanukkah of Data](https://hanukkah.bluebird.sh/
 ## [Exercises-1 - chinook](exercises-1.md)
 ## [Exercises-2 - sakila](exercises-2.md)
 ## [Exercises-3 - create db](exercises-3.md)
+## [Exercises-4 - modify db](exercises-4.md)
