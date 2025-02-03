@@ -1,4 +1,4 @@
--- Step 2, fix datatypes in tables (float to int etc)
+-- step 2, fix datatypes in tables (float to int etc)
 begin transaction;
 update migrations set version = 2;
 
@@ -15,20 +15,20 @@ alter table locations drop column id;
 alter table locations rename column new_id to id;
 
 -- episodes
-CREATE TABLE new_episodes (
-    id integer NOT NULL,
-    image_url VARCHAR,
-    imdb_rating FLOAT,
+create table new_episodes (
+    id integer not null,
+    image_url varchar,
+    imdb_rating float,
     imdb_votes integer,
-    number_in_season integer NOT NULL,
-    number_in_series integer NOT NULL,
-    original_air_date DATE NOT NULL,
-    original_air_year integer NOT NULL,
-    production_code VARCHAR NOT NULL,
-    season integer NOT NULL,
-    title VARCHAR NOT NULL,
-    us_viewers_in_millions FLOAT,
-    video_url VARCHAR,
+    number_in_season integer not null,
+    number_in_series integer not null,
+    original_air_date date not null,
+    original_air_year integer not null,
+    production_code varchar not null,
+    season integer not null,
+    title varchar not null,
+    us_viewers_in_millions float,
+    video_url varchar,
     views integer
 );
 
@@ -53,19 +53,19 @@ drop table episodes;
 alter table new_episodes rename to episodes;
 
 -- script lines
-CREATE TABLE new_script_lines (
-    id integer NOT NULL,
-    episode_id integer NOT NULL,
-    number integer NOT NULL,
-    raw_text VARCHAR NOT NULL,
-    timestamp_in_ms integer NOT NULL,
-    speaking_line VARCHAR NOT NULL,
+create table new_script_lines (
+    id integer not null,
+    episode_id integer not null,
+    number integer not null,
+    raw_text varchar not null,
+    timestamp_in_ms integer not null,
+    speaking_line varchar not null,
     character_id integer,
     location_id integer,
-    raw_character_text VARCHAR,
-    raw_location_text VARCHAR,
-    spoken_words VARCHAR,
-    normalized_text VARCHAR,
+    raw_character_text varchar,
+    raw_location_text varchar,
+    spoken_words varchar,
+    normalized_text varchar,
     word_count integer
 ); 
 

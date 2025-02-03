@@ -1,13 +1,13 @@
--- Step 4, fix primary key for each table
+-- step 4, fix primary key for each table
 begin transaction;
 update migrations set version = 4;
 
 -- characters
 create table new_characters (
     character_id integer primary key not null,
-    name VARCHAR NOT NULL,
-    normalized_name VARCHAR NOT NULL,
-    gender VARCHAR);
+    name varchar not null,
+    normalized_name varchar not null,
+    gender varchar);
 
 insert into new_characters select
     character_id,
@@ -22,8 +22,8 @@ alter table new_characters rename to characters;
 -- locations
 create table new_locations (
     location_id integer primary key not null,
-    name VARCHAR NOT NULL,
-    normalized_name VARCHAR NOT NULL);
+    name varchar not null,
+    normalized_name varchar not null);
 
 insert into new_locations select
     location_id,
@@ -36,19 +36,19 @@ alter table new_locations rename to locations;
 
 -- episodes
 create table new_episodes (
-    episode_id integer primary key NOT NULL,
-    image_url VARCHAR,
-    imdb_rating FLOAT,
+    episode_id integer primary key not null,
+    image_url varchar,
+    imdb_rating float,
     imdb_votes integer,
-    number_in_season integer NOT NULL,
-    number_in_series integer NOT NULL,
-    original_air_date DATE NOT NULL,
-    original_air_year integer NOT NULL,
-    production_code VARCHAR NOT NULL,
-    season integer NOT NULL,
-    title VARCHAR NOT NULL,
-    us_viewers_in_millions FLOAT,
-    video_url VARCHAR,
+    number_in_season integer not null,
+    number_in_series integer not null,
+    original_air_date date not null,
+    original_air_year integer not null,
+    production_code varchar not null,
+    season integer not null,
+    title varchar not null,
+    us_viewers_in_millions float,
+    video_url varchar,
     views integer
 );
 
@@ -58,18 +58,18 @@ alter table new_episodes rename to episodes;
 
 -- script lines
 create table new_script_lines (
-        script_line_id integer primary key NOT NULL,
-        episode_id integer NOT NULL,
-        number integer NOT NULL,
-        raw_text VARCHAR NOT NULL,
-        timestamp_in_ms integer NOT NULL,
-        speaking_line VARCHAR NOT NULL,
+        script_line_id integer primary key not null,
+        episode_id integer not null,
+        number integer not null,
+        raw_text varchar not null,
+        timestamp_in_ms integer not null,
+        speaking_line varchar not null,
         character_id integer,
         location_id integer,
-        raw_character_text VARCHAR,
-        raw_location_text VARCHAR,
-        spoken_words VARCHAR,
-        normalized_text VARCHAR,
+        raw_character_text varchar,
+        raw_location_text varchar,
+        spoken_words varchar,
+        normalized_text varchar,
         word_count integer
 );
 
