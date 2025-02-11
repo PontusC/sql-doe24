@@ -55,5 +55,4 @@ for order in orders:
 
 for customer in customers:
     if str(customer[0]) in relevant_customers:
-        print(customer)
-        break
+        print(customer[1], customer[5])
