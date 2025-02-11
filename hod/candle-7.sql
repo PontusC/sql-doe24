@@ -1,7 +1,7 @@
 -- Day 7
 -- One item with multiple colors, bought same day and hour
 -- Purchased by Sherri Long (id 4167)
--- Runnig query to see all items ordered by Sherri color of items is indicated by '(<color>)' in desc
+-- Running query to see all items ordered by Sherri color of items is indicated by '(<color>)' in desc
 
 select name, phone, desc
 from customers
